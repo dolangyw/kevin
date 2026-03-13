@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kevin Fernando</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kevin Fernando | Full-Stack Developer">
+<meta property="og:description" content="Kevin Fernando. Developer & Bot Creator.">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/1238343505936519243/1481678212881846535/profile.jpeg?ex=69b42fde&is=69b2de5e&hm=9ccb21fb5e021b6f89695f688a38a35dbbdcadf6aa756f4a7dd6b36da73acbef&">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="preloader">
+	<div class="loader-content">
+		<h1><div class="animate four loading-text">
+			<span>K</span><span>E</span><span>V</span><span>I</span><span>N</span> &nbsp;
+			<span>F</span><span>E</span><span>R</span><span>N</span><span>A</span><span>N</span><span>D</span><span>O</span>
+    	</div></h1>
+		<div class="loader-bar"></div>
+	</div>
+</div>
+<nav>
+<button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">Gelap <div class="music-equalizer paused" id="viz">
+      <span></span><span></span><span></span><span></span>
+    </div></button>
+<div class="menu-toggle" id="mobile-menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+<ul class="nav-links" id="nav-links">
+	<li>
+		<a href="#beranda" data-route="beranda">Beranda</a>
+	</li>
+	<li>
+		<a href="#tentang" data-route="tentang">Tentang</a>
+	</li>
+	<li>
+		<a href="#skill" data-route="skill">Skill</a>
+	</li>
+	<li>
+		<a href="#proyek" data-route="proyek">Proyek</a>
+	</li>
+	<li>
+		<a href="#galleri" data-route="galleri">Galeri</a>
+	</li>
+	<li>
+		<a href="#kontak" data-route="kontak">Kontak</a>
+	</li>
+</ul>
+</nav>
+<section id="beranda" class="hero active">
+<div class="profile-wrapper reveal active">
+	<img src="./profile.jpeg" alt="Kevin Fernando" class="profile-pic" id="profileImg">
+	<button class="love-trigger" onclick="toggleLoveMode()" id="loveBtn">❤️</button>
+</div>
+<h1 id="mainTitle" class="reveal active">Halo, Saya Kevin Fernando</h1>
+<div id="subTitle" class="typing-text reveal active">Full-Stack Developer & Bot Creator.</div>
+
+</section>
+<section id="tentang">
+<h2 class="section-title reveal">Tentang Saya</h2>
+<div class="card reveal" style="max-width: 900px; margin: 0 auto; text-align: center;">
+	<p id="aboutDescription" style="line-height: 1.8; font-size: 1.05rem;">
+		 Saya adalah seorang pengembang yang bersemangat menciptakan pengalaman digital yang interaktif dan efisien. Mulai dari merancang antarmuka web minimalis hingga mengintegrasikan basis data real-time, saya mengutamakan estetika tanpa mengorbankan performa.
+	</p>
+</div>
+</section>
+<section id="terminal">
+<div class="reveal" style="max-width: 800px; margin: 40px auto 0; width: 100%;">
+	<div class="terminal-container">
+		<div class="terminal-header">
+			<div class="dot red"></div>
+			<div class="dot yellow"></div>
+			<div class="dot green"></div>
+			<span style="font-size: 12px; opacity: 0.5; margin-left: 10px;">bot — bash</span>
+		</div>
+		<div class="terminal-body" id="terminalOut">
+			<div>
+				Welcome to Kevin-Bot Terminal. Type <span style="color: white;">/help</span> to start.
+			</div>
+		</div>
+		<div class="terminal-input-line">
+			<span>$</span>
+			<input type="text" id="terminalIn" placeholder="..." autocomplete="off"></div>
+	</div>
+</div>
+</section>
+<section id="skill">
+<h2 class="section-title reveal">Keahlian</h2>
+<div class="grid">
+	<div class="card reveal">
+		<i class="devicon-html5-plain skill-icon"></i>
+		<h3>Frontend</h3>
+		<p style="margin-top: 12px; opacity: 0.85;">React, Tailwind, JavaScript</p>
+	</div>
+	<div class="card reveal">
+		<i class="devicon-nodejs-plain skill-icon"></i>
+		<h3>Backend</h3>
+		<p style="margin-top: 12px; opacity: 0.85;">Node.js, Express, Firebase</p>
+	</div>
+	<div class="card reveal">
+		<i class="devicon-npm-plain skill-icon"></i>
+		<h3>Bot & Automation</h3>
+		<p style="margin-top: 12px; opacity: 0.85;">Baileys, Scraping, Automation</p>
+	</div>
+</div>
+</section>
+<section id="proyek">
+<h2 class="section-title reveal">Portofolio</h2>
+<div class="grid">
+	<div class="card reveal">
+		<h3>Sistem Integrasi Database</h3>
+		<p style="margin-top: 10px; opacity: 0.8;">
+			Implementasi fitur interaktif dan statistik pengunjung secara real-time pada dashboard web modern.
+		</p>
+	</div>
+	<div class="card reveal" style="transition-delay: 0.05s;">
+		<h3>Bot Otomatisasi Interaktif</h3>
+		<p style="margin-top: 10px; opacity: 0.8;">
+			Pengembangan skrip bot obrolan dengan fitur pengunduh media dan sistem bermain peran (roleplay) tingkat lanjut.
+		</p>
+	</div>
+	<div class="card reveal" onclick="window.location.href='#terminal'" data-route="terminal" style="transition-delay: 0.1s;">
+    <h3>Terminal</h3>
+    <p style="margin-top: 10px; opacity: 0.8;">
+        Terminal interaktif berbasis web yang memungkinkan pengguna menjalankan perintah, menjelajahi fitur, dan berinteraksi langsung dengan sistem melalui tampilan seperti command line.
+    </p>
+</div>
+
+<div class="card reveal" onclick="window.location.href='./lyric.html'" style="transition-delay: 0.1s;">
+    <h3>Website Spotify</h3>
+    <p style="margin-top: 10px; opacity: 0.8;">
+        Halaman pemutar musik dengan tampilan lirik sinkron bergaya Spotify, menampilkan pengalaman mendengarkan lagu yang imersif dengan lirik yang mengikuti alur musik secara otomatis.
+    </p>
+</div>
+</div>
+</section>
+<section id="kontak">
+<h2 class="section-title reveal">Mari Berkolaborasi</h2>
+<div class="card reveal" style="max-width: 560px; margin: 0 auto; text-align: center;">
+	<p style="margin-bottom: 18px;">Punya ide proyek atau ingin menyapa?</p>
+	<a href="https://wa.me/6283181795803" id="contact-btn" style="display: inline-block; padding: 10px 22px; border: 1px solid var(--text-color); border-radius: 6px; transition: all 0.2s;">Hubungi Saya</a>
+</div>
+</section>
+<section id="galleri">
+<h2 class="section-title reveal">Galleri</h2>
+<div class="grid">
+
+<div class="card reveal romantic-card" onclick="window.location.href='./index.html'" style="transition-delay: 0.1s;">
+    <h3>Pacar (closed))</h3>
+    <p style="margin-top: 10px; opacity: 0.8;">
+        "di antara ribuan detik yang berlalu, ada kamu yang selalu ingin kuingat..."
+    </p>
+</div>
+</div>
+</section>
+<footer style="padding: 40px; text-align: center; border-top: 1px solid var(--border-color); margin-top: -60px;">
+<p style="opacity: 0.6; font-size: 0.9rem;">
+	 &copy; 2026 Kevin Fernando. Dibuat dengan plenger dan cinta.
+</p>
+</footer>
+<canvas id="canvas-particles"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
