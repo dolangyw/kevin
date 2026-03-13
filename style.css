@@ -699,3 +699,132 @@ h2.section-title {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+.pricing-card .plans {
+    list-style: none;
+    padding: 20px 0 0; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.pricing-card .plans li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card .plans li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-color);
+    transform: translateX(8px);
+    box-shadow: var(--glow);
+}
+
+.plan-duration {
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.plan-duration::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card .plans li:hover .plan-duration::before {
+    transform: scale(1.5);
+}
+
+.plan-price {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-family: 'JetBrains Mono', monospace;     background: rgba(0, 0, 0, 0.2);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.pricing-card .plans li:hover .plan-price {
+    border-color: var(--accent-color);
+    background: transparent;
+}
+
+.pricing-card .plans li.featured {
+    border-color: var(--accent-color);
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+}
+
+.btn-noir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background: transparent;
+    color: var(--text-color);
+    border: 1.5px solid var(--text-color);
+    border-radius: 4px; /* Sedikit rounded tapi tetap tajam/maskulin */
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    outline: none;
+}
+
+.btn-noir::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--text-color);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-noir:hover {
+    color: var(--bg-color); 
+    box-shadow: var(--glow);
+    transform: translateY(-2px);
+}
+
+.btn-noir:hover::before {
+    width: 100%;
+}
+
+.btn-noir:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.btn-noir i {
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.btn-noir:hover i {
+    transform: translateX(5px);
+}
